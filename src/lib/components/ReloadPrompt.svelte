@@ -2,12 +2,8 @@
 	import { useRegisterSW } from 'virtual:pwa-register/svelte';
 
 	const { offlineReady, needRefresh, updateServiceWorker } = useRegisterSW({
-		onRegistered(swr) {
-			console.log(`SW registered: ${swr}`);
-		},
-		onRegisterError(error) {
-			console.log('SW registration error', error);
-		}
+		onRegistered() {},
+		onRegisterError() {}
 	});
 
 	function close() {

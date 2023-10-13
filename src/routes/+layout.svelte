@@ -1,4 +1,6 @@
 <script>
+	import { App, Page, Navbar, Block } from 'konsta/svelte';
+
 	import '../app.postcss';
 	import { onMount } from 'svelte';
 	import { pwaInfo } from 'virtual:pwa-info';
@@ -14,14 +16,10 @@
 				onRegistered(r) {
 					r &&
 						setInterval(() => {
-							console.log('Checking for sw update');
 							r.update();
 						}, 20000 /* 20s for testing purposes */);
-					console.log(`SW Registered: ${r}`);
 				},
-				onRegisterError(error) {
-					console.log('SW registration error', error);
-				}
+				onRegisterError() {}
 			});
 		}
 	});
@@ -31,7 +29,15 @@
 	<link rel="manifest" href={webManifestHref} />
 </svelte:head>
 
-<slot />
+<App theme="ios">
+	<Page>
+		<Navbar title="My App" />
+
+		<Block strong>
+			<slot />
+		</Block>
+	</Page>
+</App>
 
 {#await import('$lib/components/ReloadPrompt.svelte') then { default: ReloadPrompt }}
 	<ReloadPrompt />

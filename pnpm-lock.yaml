@@ -17,6 +17,9 @@ dependencies:
   '@capacitor/ios':
     specifier: ^5.5.0
     version: 5.5.0(@capacitor/core@5.5.0)
+  konsta:
+    specifier: ^3.1.0
+    version: 3.1.0
   workbox-window:
     specifier: ^7.0.0
     version: 7.0.0
@@ -3591,6 +3594,11 @@ packages:
   /known-css-properties@0.28.0:
     resolution: {integrity: sha512-9pSL5XB4J+ifHP0e0jmmC98OGC1nL8/JjS+fi6mnTlIf//yt/MfVLtKg7S6nCtj/8KTcWX7nRlY0XywoYY1ISQ==}
     dev: true
+
+  /konsta@3.1.0:
+    resolution: {integrity: sha512-ts/y+dLAb7g2PFm6wWXM3s4Pur84Cxrw1iFT82R5mybnisTk+nTrWV+sR8OIqP0Bkql+7ZqT+SRlOF7/o5DqsA==}
+    engines: {node: '>= 4.7.0'}
+    dev: false
 
   /leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}

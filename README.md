@@ -1,9 +1,10 @@
 - [x] SvelteKit TypeScript
 - [x] TailwindCSS
   - [ ] Konsta UI
-- [ ] PWA
-  - [ ] Offline Use
-  - [ ] Service Workers
+- [x] PWA
+  - [x] Manifest
+  - [x] Offline Use
+  - [x] Service Workers
 - [x] Build
   - [x] SPA
   - [x] SSR Support
