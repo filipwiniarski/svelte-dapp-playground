@@ -1,0 +1,1 @@
+Create rules for routes, type params, encode URLs, stuff like that, handy.

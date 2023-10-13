@@ -1,0 +1,31 @@
+- [x] SvelteKit TypeScript
+- [x] TailwindCSS
+  - [ ] Konsta UI
+- [ ] PWA
+  - [ ] Offline Use
+  - [ ] Service Workers
+- [x] Build
+  - [x] SPA
+  - [x] SSR Support
+  - [x] SSG Support (required by Capacitor)
+- [x] Capacitor Setup
+  - [x] iOS
+  - [ ] Android
+- [x] Tests & Tools
+  - [x] Prettier
+  - [x] ESLint
+  - [ ] Playwright E2E Test
+  - [x] Unit Tests
+- [ ] Security
+- [ ] Metrics
+- [ ] Svelte
+  - [ ] State Management
+  - [ ] HTTP Communication
+  - [ ] Websockets
+- [ ] Browser Extension
+  - [ ] Browser Events
+  - [ ] Routing
+  - [ ] Bundling
+- [ ] Ether.js
+
+Implement the interaction with various asset types including ERC20 tokens, Circles, and xDai, adapting their functionality to the general UI patterns
