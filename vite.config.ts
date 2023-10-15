@@ -1,12 +1,19 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit';
+import fs from 'fs';
 
 export default defineConfig({
 	define: {
 		__DATE__: `'${new Date().toISOString()}'`,
 		__RELOAD_SW__: false,
 		'process.env.NODE_ENV': process.env.NODE_ENV === 'production' ? '"production"' : '"development"'
+	},
+	server: {
+		https: {
+			key: fs.readFileSync(`${__dirname}/cert/key.pem`),
+			cert: fs.readFileSync(`${__dirname}/cert/cert.pem`)
+		}
 	},
 	plugins: [
 		sveltekit(),
@@ -27,7 +34,7 @@ export default defineConfig({
 				background_color: '#ffffff',
 				icons: [
 					{
-						src: '/favicon.png',
+						src: '/icon-512x512.png',
 						type: 'image/png',
 						sizes: '512x512'
 					}

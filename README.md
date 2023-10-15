@@ -1,28 +1,30 @@
 - [x] SvelteKit TypeScript
+- [x] Local HTTPS Environment
 - [x] TailwindCSS
 - [x] PWA
+  - [x] Service Worker
   - [x] Manifest
   - [x] Caching
-  - [x] Offline Use
+  - [x] Offline
   - [x] Versioning
-  - [x] Service Workers
+  - [x] Installable App
 - [x] Build
-  - [x] SPA
   - [x] SSR Support
   - [x] SSG Support (required by Capacitor)
 - [x] Capacitor Setup
-  - [x] iOS Build Demo
+  - [x] iOS
+  - [x] Android
 - [x] Tests & Tools
   - [x] Prettier
   - [x] ESLint
-  - [x] E2E Tests
+  - [x] E2E Playwright Tests
   - [x] Unit Tests
 - [x] Security
   - [x] CSP
   - [x] ESLint XSS detection
   - [x] CSRF
   - [x] Static Adapter / Server Side Code
-  - [x] `bind` over `@html` (XSS)
+  - [x] I/O Sanitization
 - [x] Ether.js
-  - [x] Connect to MetaMask
+  - [x] Connect to Ethereum via MetaMask
   - [x] Retrieve Wallet
