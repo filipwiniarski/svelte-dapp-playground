@@ -1,6 +1,6 @@
 - [x] SvelteKit TypeScript
 - [x] TailwindCSS
-  - [ ] Konsta UI
+  - [x] Konsta UI
 - [x] PWA
   - [x] Manifest
   - [x] Offline Use
@@ -15,10 +15,9 @@
 - [x] Tests & Tools
   - [x] Prettier
   - [x] ESLint
-  - [ ] Playwright E2E Test
+  - [x] E2E Tests
   - [x] Unit Tests
 - [ ] Security
-- [ ] Metrics
 - [ ] Svelte
   - [ ] State Management
   - [ ] HTTP Communication
