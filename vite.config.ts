@@ -25,7 +25,13 @@ export default defineConfig({
 				display: 'standalone',
 				theme_color: '#ffffff',
 				background_color: '#ffffff',
-				icons: []
+				icons: [
+					{
+						src: '/favicon.png',
+						type: 'image/png',
+						sizes: '512x512'
+					}
+				]
 			},
 			injectManifest: {
 				globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}']
