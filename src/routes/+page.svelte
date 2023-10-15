@@ -1,11 +1,25 @@
 <script lang="ts">
 	import { connectToMetaMask } from '$lib/ethers';
-	import { JsonRpcSigner } from 'ethers';
+	import { formatEther, JsonRpcSigner, type Provider } from 'ethers';
 
-	let provider: JsonRpcSigner | undefined;
+	let provider: Provider | undefined;
+	let signer: JsonRpcSigner | undefined;
+	let balance: string;
 
 	const connect = async () => {
-		provider = await connectToMetaMask();
+		const payload = await connectToMetaMask();
+		signer = payload?.signer;
+		provider = payload?.provider;
+
+		await getBalance();
+	};
+
+	const getBalance = async () => {
+		if (!provider || !signer) {
+			return;
+		}
+		balance = formatEther(await provider.getBalance(signer.address));
+		console.log(balance);
 	};
 </script>
 
@@ -16,7 +30,8 @@
 			>Connect Wallet</button
 		>
 	</div>
-	{#if provider}
-		<span>Wallet Address: {provider.address}</span>
+	{#if signer}
+		<span>Wallet Address: {signer.address}</span>
+		<span>Balance: {balance} ETH</span>
 	{/if}
 </div>
